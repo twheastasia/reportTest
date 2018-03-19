@@ -9,6 +9,7 @@
     "highcharts-exporting": "^0.1.7",
     "highcharts-more": "^0.1.7",
     "highcharts-solid-gauge": "^0.1.7",
+    "progressbar.js": "^1.0.1",
     "react": "^16.2.0",
     "react-app-rewired": "^1.5.0",
     "react-highcharts": "^16.0.2",
