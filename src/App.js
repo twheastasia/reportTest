@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './svg/logo.svg';
 import './App.css';
-import {Button } from 'antd-mobile';
 import { Link } from 'react-router-dom';
 
 class App extends Component {
