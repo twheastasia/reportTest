@@ -18,7 +18,42 @@ HighchartsSolidGauge(ReactHighcharts.Highcharts);
 var singleExamData = require('../utils/single_exam_chart_data.js');
 var config = singleExamData.get_single_exam_chart_view_data("exam_data.exam_name", 80);
 
-
+var config2 = {
+  chart: {
+      marginTop: 40
+  },
+  title: {
+      text: '2017 YTD'
+  },
+  xAxis: {
+      categories: ['<span class="hc-cat-title">Revenue</span><br/>U.S. $ (1,000s)']
+  },
+  yAxis: {
+      plotBands: [{
+          from: 0,
+          to: 150,
+          color: '#666'
+      }, {
+          from: 150,
+          to: 225,
+          color: '#999'
+      }, {
+          from: 225,
+          to: 9e9,
+          color: '#bbb'
+      }],
+      title: null
+  },
+  series: [{
+      data: [{
+          y: 275,
+          target: 250
+      }]
+  }],
+  tooltip: {
+      pointFormat: '<b>{point.y}</b> (with target at {point.target})'
+  }
+};
 
 class Report extends Component {
   render() {
@@ -40,6 +75,7 @@ class Report extends Component {
         <div id="examDetailsContainer" style={{margin: 150,textAlign:"center"}}>
           做题情况
           什么类型的题目，对了几道错了几道
+          <ReactHighcharts config = {config2}></ReactHighcharts>
         </div>
 
         <div id="suggestionContainer" style={{margin: 150,textAlign:"center"}}>
