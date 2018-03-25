@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {Button } from 'antd-mobile';
+import {Button, Progress } from 'antd-mobile';
 import { Link } from 'react-router-dom';
-import scoreBg from '../svg/score_bg.svg';
 import './report.css';
+import myProgressBar from './myProgressBar';
 
 // Highcharts
 const ReactHighcharts = require('react-highcharts');
@@ -67,15 +67,14 @@ class Report extends Component {
           <ReactHighcharts config = {config}></ReactHighcharts>
         </div>
 
-        <div id="scoreContainer2" style={{minWidth: "400px", maxWidth: "600px", height: "400px", margin: "auto"}}>
-          {/* <img src="../svg/score_bg.svg"></img> */}
-        </div>
-
-
-        <div id="examDetailsContainer" style={{margin: 150,textAlign:"center"}}>
+        <div id="examDetailsContainer" style={{margin: 150}}>
           做题情况
           什么类型的题目，对了几道错了几道
-          <ReactHighcharts config = {config2}></ReactHighcharts>
+          <myProgressBar />
+          <div className="show-info">
+            <div className="progress"><Progress percent={50} position="normal" /></div>
+            <div aria-hidden="true">50%</div>
+          </div>
         </div>
 
         <div id="suggestionContainer" style={{margin: 150,textAlign:"center"}}>
