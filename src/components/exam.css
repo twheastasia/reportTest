@@ -1,0 +1,63 @@
+@media screen and (max-device-width: 480px) {
+  #tips {
+    display: none;
+  }
+
+}
+
+@media screen and (min-device-width: 481px) {
+  #main{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .questionTable {
+    display: table;
+    background: #f1f1f1;
+  }
+  
+  .questionRow {
+    display: table-row;
+    padding: 5px; 
+    
+  }
+  
+  .questions{
+    display: table-cell;
+    padding: 5px;
+    vertical-align: middle;
+  
+    
+  }
+  
+  .answers {
+    display: table-cell;
+    padding: 5px;
+    width: 100px;
+    vertical-align: middle;
+  }
+}
+
+#examTitle {
+  text-align: center;
+}
+
+#questionImagesContainer.img {
+  width: 500px;
+  height: 100px;
+}
+
+#timeCounter {
+  position: fixed;
+  top: 50px;
+  right: 50px;  
+  z-index: 999;
+}
+
+
+#submitBtn {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+}
