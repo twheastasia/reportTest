@@ -1,35 +1,19 @@
 import React from 'react';
 import './exam.css';
-import {Button, Progress, InputItem, WingBlank, Steps } from 'antd-mobile';
+import {Button, Progress, InputItem, WingBlank, Carousel, WhiteSpace } from 'antd-mobile';
 
-const Step = Steps.Step;
-
-const steps = [{
-  title: '1',
-  description: '',
-}, {
-  title: '2',
-  description: '',
-}, {
-  title: '3',
-  description: '',
-}, {
-  title: '4',
-  description: '',
-}, {
-  title: '5',
-  description: '',
-}, {
-  title: '6',
-  description: '',
-}].map((s, i) => <Step key={i} title={s.title} description={s.description} />);
-
+let state = {
+  data: ['1', '2', '3'],
+  imgHeight: 176,
+  slideIndex: 0,
+}
 
 
 const ExamPage = ({}) => {
   return (
 
     <WingBlank id="main">
+
       <Progress percent={30} position="fixed" />
       <div id="timeCounter">
         <span style={{color: "red"}}>06:00</span>
@@ -39,7 +23,56 @@ const ExamPage = ({}) => {
         <h5>（时间6分钟）</h5>
       </header>
 
-      <Steps current={1} direction="horizontal" size="small">{steps}</Steps>
+      <Carousel
+          autoplay={false}
+          infinite
+          selectedIndex={0}
+          beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+          afterChange={index => console.log('slide to', index)}
+        >
+          {state.data.map((val, index) => (
+            <div class="questionContainer">
+              <div class="questions">
+                <h3>第{val}题:</h3>
+                <section>
+                  <article>
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。  
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=__________。 
+                    计算::4.65×32+2.5×46.5+0.465×430=______2____。 
+                    计算::4.65×32+2.5×46.5+0.465×430=_____1_____。 
+                  </article>
+                  <div class="questionImagesContainer">
+                  </div>
+                  <br/>
+                  <div class="answerImageContainer">
+                  </div>
+                </section>
+              </div>
+              <div class="answers">
+                <InputItem />
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      <WhiteSpace />
+      <Button id="submitBtn" onclick="onSubmitBtnClicked()" type="primary">
+        提交
+      </Button>
 
       <div class="questionTable">
         <div class="questionRow" id="tips">
@@ -176,9 +209,7 @@ const ExamPage = ({}) => {
       </div>
 
       <hr/>
-      <Button id="submitBtn" onclick="onSubmitBtnClicked()" type="primary">
-        提交
-      </Button>
+
  
     </WingBlank>
 

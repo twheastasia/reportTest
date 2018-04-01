@@ -59,5 +59,17 @@
 #submitBtn {
   position: fixed;
   bottom: 0px;
-  right: 20px;
+  left: 0px;
+  width: 100%;
+  z-index: 998;
+}
+
+.questionContainer {
+  height: 450px;
+  border-radius: 15px;
+  border: none;
+  border-width: 1px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  overflow: auto;
 }
