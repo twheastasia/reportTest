@@ -13,7 +13,6 @@ class QuestionCarousel extends Component {
       currentQuestionId: 0,
       answers: []
     };
-    console.log(this.state);
     this.onInputChange = this.onInputChange.bind(this);
   }
 
@@ -48,7 +47,6 @@ class QuestionCarousel extends Component {
           selectedIndex={0}
           beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
           afterChange={index => {
-            console.log('slide to', index);
             this.setState({currentQuestionId: index});
           }}
         >
