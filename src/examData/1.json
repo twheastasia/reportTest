@@ -1,0 +1,42 @@
+{
+  "name": "数学期中考试一",
+  "time": 360,
+  "questions":[
+    {
+      "questionId": 1,
+      "content": "计算: 4.65×32+2.5×46.5+0.465×430=__________。",
+      "questionImages":[],
+      "optionImages": []
+    },
+    {
+      "questionId": 2,
+      "content": "有六个数,平均数2017,如果把其中一个数改为2018,那么这六个数的平均数是2019,这个被改动的数原来是__________。",
+      "questionImages":[],
+      "optionImages": []
+    },
+    {
+      "questionId": 3,
+      "content": "下列注有英文字母的6个图形中,你能选出一个适合的填入空白方格中吗?",
+      "questionImages":["2.png"],
+      "optionImages": ["3a.png", "3b.png", "3c.png", "3d.png", "3e.png", "3f.png"]
+    },
+    {
+      "questionId": 4,
+      "content": "袋子里有红、黑、黄、白球若干个,每人随意摸两个球,至少有多少人才能保证他们当中一定有两人所摸的球的花色是相同的?",
+      "questionImages":[],
+      "optionImages": []
+    },
+    {
+      "questionId": 5,
+      "content": "甲、乙、丙三人中,甲每分钟走20米,乙每分钟走30米,丙每分钟走40米,甲、乙两人从A地、丙一人从B地同时相向出发,丙遇到乙后2分钟再遇到甲,问AB两地相距多少米?",
+      "questionImages":[],
+      "optionImages": []
+    },
+    {
+      "questionId": 6,
+      "content": "如图,四边形ABCD为长方形,BC=15厘米,CD=8厘米,三角形AFB的面积比三角形DEF的面积大30平方厘米,求DE的长。",
+      "questionImages":["6.png"],
+      "optionImages": []
+    }
+  ] 
+}
